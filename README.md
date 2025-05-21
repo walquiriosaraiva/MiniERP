@@ -104,4 +104,5 @@ curl -X POST http://localhost/api/webhook/pedido \
 Mail::to($pedido->email_cliente)->send(new PedidoFinalizadoMail($pedido));
 ```
 
-## não há necessidade de gerar o sql, pois o mesmo foi gerado com a migration do laravel, basta executar no container
+## não há necessidade de gerar o sql, pois o mesmo foi gerado com a migration do laravel, basta executar no container, caso queira o arquivo está no diretório do projeto
+- backup_mini_erp.sql
