@@ -65,7 +65,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - Clone do projeto pelo link [Github](https://github.com/walquiriosaraiva/MiniERP.git)
 - Copie o conteúdo do arquivo .env.example para .env utilizando o comando `cp .env.example .env`
 ## Passo 2 - docker-compose
-- Execute o comando `docker-compose up -d --build MiniERP`
+- Execute o comando `docker-compose up -d --build`
 - Com o comando acima será feito a build do projeto MiniERP, agora estamos quase lá.
 
 ## Passo 3 - rodando os container adicionais para manipular comandos Composer e Artisan
