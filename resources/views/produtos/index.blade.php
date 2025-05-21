@@ -24,7 +24,6 @@
                 <td>{{ $produto->nome }}</td>
                 <td>R$ {{ number_format($produto->preco, 2, ',', '.') }}</td>
                 <td>
-                    <a href="#" class="btn btn-sm btn-secondary">Editar</a>
                     <form method="POST" action="{{ route('carrinho.adicionar') }}">
                     @csrf
                     <input type="hidden" name="produto_id" value="{{ $produto->id }}">

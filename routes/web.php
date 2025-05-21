@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\PedidoController;
@@ -33,3 +34,11 @@ Route::get('/carrinho/finalizar', function () {
 
 #pedidos
 Route::get('/pedidos', [PedidoController::class, 'index'])->name('pedidos.index');
+
+#lista de rotas enviadas para a view
+Route::get('/dev/routes', function () {
+    Artisan::call('route:list', ['--json' => true]);
+    $routes = json_decode(Artisan::output(), true);
+
+    return view('dev.routes', compact('routes'));
+});
